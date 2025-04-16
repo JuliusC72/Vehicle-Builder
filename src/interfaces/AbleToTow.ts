@@ -5,10 +5,8 @@ import Car from "../classes/Car.js";
 
 // define the interface
 interface AbleToTow {
-    // declare the properties
     towingCapacity: number;
-    // tow method takes a truck or a motorbike or a car as an argument
-    tow(vehicle: Truck | Motorbike | Car): void;
+    tow(vehicle: any): void; // Or use a more specific type like { weight: number, make: string, model: string }
 }
 
 // export the interface
